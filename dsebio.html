@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生物科 DSE 題目答案查詢</title>
+    <style>
+    :root{ --bg:#0f172a; --card:#111827; --muted:#94a3b8; --text:#e5e7eb; --accent:#22c55e; --danger:#ef4444; --border:#1f2937; }
+    html,body{ height:100%; }
+    body{ margin:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, 'PingFang HK', 'Microsoft JhengHei', sans-serif; background:linear-gradient(135deg,#0b1024 0%,#0f172a 60%,#0b1323 100%); color:var(--text); }
+    .container{ max-width:880px; margin:0 auto; padding:24px; }
+    .header{ display:flex; align-items:center; justify-content:space-between; margin:16px 0 24px; }
+    .title{ font-size:24px; font-weight:700; letter-spacing:0.3px; }
+    .badge{ padding:4px 10px; border-radius:999px; background:#0b2930; color:#7dd3fc; border:1px solid #113946; font-size:12px; }
+    .card{ background:rgba(17,24,39,0.85); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,0.25); backdrop-filter: blur(6px); }
+    .row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .input{ flex:1; min-width:220px; background:#0b1220; color:var(--text); border:1px solid #22304a; border-radius:10px; padding:12px 14px; outline:none; transition:border .2s, box-shadow .2s; }
+    .input:focus{ border-color:#3b82f6; box-shadow:0 0 0 3px rgba(59,130,246,0.2); }
+    .btn{ background:linear-gradient(135deg,#16a34a,#22c55e); color:#05140b; border:none; border-radius:10px; padding:12px 16px; font-weight:700; cursor:pointer; transition:filter .2s, transform .04s; }
+    .btn:active{ transform:translateY(1px); }
+    .status{ margin-top:10px; font-size:14px; color:var(--muted); }
+    .result{ margin-top:14px; font-size:16px; line-height:1.6; background:#0b1220; border:1px solid #22304a; border-radius:10px; padding:12px 14px; }
+    .result.ok{ border-color:#14532d; color:#86efac; }
+    .result.err{ border-color:#4c1d1d; color:#fecaca; }
+    .section{ margin-top:18px; }
+    code{ background:#0b1220; border:1px solid #22304a; padding:1px 6px; border-radius:6px; }
+    .footer{ margin-top:26px; text-align:center; color:#9ca3af; font-size:12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">生物科 DSE 題目答案查詢</div>
+            <div class="badge">Teacher Edition</div>
+        </div>
+
+        <div class="card">
+            <div class="row">
+                <input id="codeInput" class="input" type="text" placeholder="輸入題目編號，例如：A123 或 2201" />
+                <button id="lookupBtn" class="btn">查詢答案</button>
+            </div>
+            <div id="result" class="result" style="display:none;"></div>
+            <div class="status" id="loadStatus">正在嘗試載入 answers.csv…</div>
+        </div>
+
+        <div class="card section">
+            <div style="font-weight:700; margin-bottom:8px;">資料來源與備用方法</div>
+            <ul style="margin:0 0 10px 18px; padding:0; color:#cbd5e1;">
+                <li>優先使用內嵌 JSON/CSV（頁面內置資料）。</li>
+                <li>同資料夾的 <code>answers.csv</code> 亦會自動讀取。</li>
+                <li>如仍需，亦可手動上載 CSV。</li>
+            </ul>
+            <input id="csvFile" type="file" accept=".csv" />
+        </div>
+
+        <div class="footer">© 生物科 DSE 查詢工具</div>
+    </div>
+
+    <!--
+        內嵌 CSV：
+        - 將你的 CSV（兩欄：編號,答案；可含表頭）貼到下方 script 中間。
+        - 儲存後重新開啟網頁即可；優先使用內嵌資料。
+        - 例子：
+            A123,心臟輸出量增加
+            B045,光合作用速率下降
+            C200,滲透作用
+    -->
+    <script id="embeddedCsv" type="text/plain" style="display:none"></script>
+
+    <!--
+        內嵌 JSON（建議）：
+        - 更適合長文與多行答案，不會受 CSV 換行/逗號影響。
+        - 形式：{"編號": "答案文字...", "A123": "..."}
+        - 若同時存在，優先使用 JSON。
+    -->
+    <script id="embeddedJson" type="application/json" style="display:none"></script>
+
+    <script>
+    (function(){
+        /** @type {Map<string,string>} */
+        const codeToAnswer = new Map();
+
+        const codeInput = document.getElementById('codeInput');
+        const lookupBtn = document.getElementById('lookupBtn');
+        const resultEl = document.getElementById('result');
+        const fileInput = document.getElementById('csvFile');
+        const loadStatus = document.getElementById('loadStatus');
+
+        function normalizeCell(text){
+            if(typeof text !== 'string') return '';
+            return text.replace(/^\uFEFF/, '').trim();
+        }
+
+        function escapeHtml(unsafe){
+            return String(unsafe)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function stripWrappingQuotes(text){
+            if(!text) return text;
+            if((text.startsWith('"') && text.endsWith('"')) || (text.startsWith("'") && text.endsWith("'"))){
+                return text.slice(1, -1);
+            }
+            return text;
+        }
+
+        function normalizeKey(text){
+            const cleaned = normalizeCell(stripWrappingQuotes(String(text || '')));
+            // 忽略所有空白並轉大楷，提升比對寬容度
+            return cleaned.replace(/\s+/g, '').toUpperCase();
+        }
+
+        function parseCsv(text){
+            codeToAnswer.clear();
+
+            // 偵測分隔符（以第一行非空行為準）
+            function detectDelimiter(sample){
+                const candidates = [',', ';', '\t'];
+                let best = ',';
+                let bestCount = -1;
+                for(const d of candidates){
+                    const re = new RegExp(d === '\\t' ? '\\t' : d.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g');
+                    const count = (sample.match(re) || []).length;
+                    if(count > bestCount){ best = d; bestCount = count; }
+                }
+                return best;
+            }
+
+            const lines = text.replace(/\r\n?/g, '\n').split('\n');
+            let firstNonEmpty = '';
+            for(const ln of lines){
+                if(ln.trim() !== ''){ firstNonEmpty = ln; break; }
+            }
+            const delimiter = detectDelimiter(firstNonEmpty || ',');
+
+            // 逐字元解析，支援引號、內含逗號與多行
+            const rows = [];
+            let currentField = '';
+            let currentRow = [];
+            let inQuotes = false;
+            let i = 0;
+            const textUnified = text.replace(/\r\n?/g, '\n');
+            while(i < textUnified.length){
+                const ch = textUnified[i];
+                if(inQuotes){
+                    if(ch === '"'){
+                        // 檢查逃脫引號 "" -> "
+                        if(i + 1 < textUnified.length && textUnified[i+1] === '"'){
+                            currentField += '"';
+                            i += 2;
+                            continue;
+                        } else {
+                            inQuotes = false;
+                            i++;
+                            continue;
+                        }
+                    } else {
+                        currentField += ch;
+                        i++;
+                        continue;
+                    }
+                } else {
+                    if(ch === '"'){
+                        inQuotes = true;
+                        i++;
+                        continue;
+                    }
+                    const isDelimiter = (delimiter === '\t') ? (ch === '\t') : (ch === delimiter);
+                    if(isDelimiter){
+                        currentRow.push(currentField);
+                        currentField = '';
+                        i++;
+                        continue;
+                    }
+                    if(ch === '\n'){
+                        currentRow.push(currentField);
+                        rows.push(currentRow);
+                        currentRow = [];
+                        currentField = '';
+                        i++;
+                        continue;
+                    }
+                    currentField += ch;
+                    i++;
+                }
+            }
+            // 收尾
+            currentRow.push(currentField);
+            rows.push(currentRow);
+
+            for(const row of rows){
+                if(!row || row.length < 2) continue;
+                const rawKey = row[0];
+                const rawVal = row[1];
+                const key = normalizeKey(rawKey);
+                const val = normalizeCell(String(rawVal));
+                // 跳過常見表頭
+                if(key === '編號' || key === '编号' || key === 'ID' || key === 'CODE'){
+                    continue;
+                }
+                if(key !== ''){
+                    codeToAnswer.set(key, val);
+                }
+            }
+        }
+
+        function showStatus(message, isError){
+            if(loadStatus){
+                loadStatus.textContent = message;
+                loadStatus.style.color = isError ? '#b00020' : '#555';
+            }
+        }
+
+        function tryLoadEmbeddedCsv(){
+            const holder = document.getElementById('embeddedCsv');
+            if(!holder) return false;
+            const text = String(holder.textContent || '').trim();
+            if(text.length === 0) return false;
+            try{
+                parseCsv(text);
+                showStatus(`已載入內嵌 CSV（共 ${codeToAnswer.size} 條）。`);
+                return true;
+            }catch(e){
+                showStatus('解析內嵌 CSV 時出錯。', true);
+                return false;
+            }
+        }
+
+        function tryLoadEmbeddedJson(){
+            const holder = document.getElementById('embeddedJson');
+            if(!holder) return false;
+            const text = String(holder.textContent || '').trim();
+            if(text.length === 0) return false;
+            try{
+                const obj = JSON.parse(text);
+                codeToAnswer.clear();
+                for(const k in obj){
+                    if(Object.prototype.hasOwnProperty.call(obj, k)){
+                        const key = normalizeKey(k);
+                        const val = String(obj[k] ?? '');
+                        if(key !== ''){
+                            codeToAnswer.set(key, val);
+                        }
+                    }
+                }
+                showStatus(`已載入內嵌 JSON（共 ${codeToAnswer.size} 條）。`);
+                return true;
+            }catch(e){
+                showStatus('解析內嵌 JSON 時出錯。', true);
+                return false;
+            }
+        }
+
+        async function tryLoadDefaultCsv(){
+            try{
+                const resp = await fetch('answers.csv', { cache: 'no-store' });
+                if(!resp.ok){
+                    showStatus('未找到 answers.csv，請上載 CSV 檔。', true);
+                    return;
+                }
+                const text = await resp.text();
+                parseCsv(text);
+                showStatus(`已載入 answers.csv（共 ${codeToAnswer.size} 條）。`);
+            }catch(err){
+                showStatus('讀取 answers.csv 時出錯，請手動上載。', true);
+            }
+        }
+
+        function lookup(){
+            const code = normalizeKey(codeInput.value);
+            if(code === ''){
+                resultEl.textContent = '請先輸入編號。';
+                resultEl.style.color = '#b00020';
+                resultEl.classList.remove('ok');
+                resultEl.classList.add('err');
+                resultEl.style.display = '';
+                return;
+            }
+            if(codeToAnswer.size === 0){
+                resultEl.textContent = '尚未載入答案資料，請先提供 CSV。';
+                resultEl.style.color = '#b00020';
+                resultEl.classList.remove('ok');
+                resultEl.classList.add('err');
+                resultEl.style.display = '';
+                return;
+            }
+            if(codeToAnswer.has(code)){
+                const answer = String(codeToAnswer.get(code) ?? '');
+                const html = `答案：` + escapeHtml(answer).replace(/\n/g, '<br>');
+                resultEl.innerHTML = html;
+                resultEl.style.color = '#0b8457';
+                resultEl.classList.remove('err');
+                resultEl.classList.add('ok');
+                resultEl.style.display = '';
+            }else{
+                resultEl.textContent = '找不到此編號的答案。';
+                resultEl.style.color = '#b00020';
+                resultEl.classList.remove('ok');
+                resultEl.classList.add('err');
+                resultEl.style.display = '';
+            }
+        }
+
+        lookupBtn.addEventListener('click', lookup);
+        codeInput.addEventListener('keydown', function(e){
+            if(e.key === 'Enter') lookup();
+        });
+
+        fileInput.addEventListener('change', function(){
+            const file = fileInput.files && fileInput.files[0];
+            if(!file){ return; }
+            const reader = new FileReader();
+            reader.onload = function(){
+                try{
+                    parseCsv(String(reader.result || ''));
+                    showStatus(`已載入上載的 CSV（共 ${codeToAnswer.size} 條）。`);
+                }catch(err){
+                    showStatus('解析 CSV 時出錯，請檢查檔案格式。', true);
+                }
+            };
+            reader.onerror = function(){
+                showStatus('讀取檔案時出錯。', true);
+            };
+            reader.readAsText(file, 'utf-8');
+        });
+
+        // 載入優先序：內嵌 JSON > 內嵌 CSV > 同資料夾 answers.csv > 手動上載
+        if(!tryLoadEmbeddedJson()){
+            if(!tryLoadEmbeddedCsv()){
+                tryLoadDefaultCsv();
+            }
+        }
+    })();
+    </script>
+</body>
+</html>
