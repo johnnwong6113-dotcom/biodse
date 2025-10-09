@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>生物科 DSE 題目答案查詢</title>
     <style>
-    :root{ --bg:#0f172a; --card:#111827; --muted:#94a3b8; --text:#e5e7eb; --accent:#22c55e; --danger:#ef4444; --border:#1f2937; }
+    :root{ --bg:#ffffff; --card:#f8fafc; --muted:#64748b; --text:#1e293b; --accent:#059669; --danger:#dc2626; --border:#e2e8f0; }
     html,body{ height:100%; }
-    body{ margin:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, 'PingFang HK', 'Microsoft JhengHei', sans-serif; background:linear-gradient(135deg,#0b1024 0%,#0f172a 60%,#0b1323 100%); color:var(--text); }
+    body{ margin:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, 'PingFang HK', 'Microsoft JhengHei', sans-serif; background:linear-gradient(135deg,#f1f5f9 0%,#ffffff 60%,#f8fafc 100%); color:var(--text); }
     .container{ max-width:880px; margin:0 auto; padding:24px; }
     .header{ display:flex; align-items:center; justify-content:space-between; margin:16px 0 24px; }
-    .title{ font-size:24px; font-weight:700; letter-spacing:0.3px; }
-    .badge{ padding:4px 10px; border-radius:999px; background:#0b2930; color:#7dd3fc; border:1px solid #113946; font-size:12px; }
-    .card{ background:rgba(17,24,39,0.85); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,0.25); backdrop-filter: blur(6px); }
+    .title{ font-size:24px; font-weight:700; letter-spacing:0.3px; color:#1e293b; }
+    .badge{ padding:4px 10px; border-radius:999px; background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; font-size:12px; }
+    .card{ background:rgba(255,255,255,0.9); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:0 4px 20px rgba(0,0,0,0.08); backdrop-filter: blur(6px); }
     .row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .input{ flex:1; min-width:220px; background:#0b1220; color:var(--text); border:1px solid #22304a; border-radius:10px; padding:12px 14px; outline:none; transition:border .2s, box-shadow .2s; }
-    .input:focus{ border-color:#3b82f6; box-shadow:0 0 0 3px rgba(59,130,246,0.2); }
-    .btn{ background:linear-gradient(135deg,#16a34a,#22c55e); color:#05140b; border:none; border-radius:10px; padding:12px 16px; font-weight:700; cursor:pointer; transition:filter .2s, transform .04s; }
+    .input{ flex:1; min-width:220px; background:#ffffff; color:var(--text); border:1px solid #cbd5e1; border-radius:10px; padding:12px 14px; outline:none; transition:border .2s, box-shadow .2s; }
+    .input:focus{ border-color:#3b82f6; box-shadow:0 0 0 3px rgba(59,130,246,0.1); }
+    .btn{ background:linear-gradient(135deg,#059669,#10b981); color:#ffffff; border:none; border-radius:10px; padding:12px 16px; font-weight:700; cursor:pointer; transition:filter .2s, transform .04s; }
     .btn:active{ transform:translateY(1px); }
     .status{ margin-top:10px; font-size:14px; color:var(--muted); }
-    .result{ margin-top:14px; font-size:16px; line-height:1.6; background:#0b1220; border:1px solid #22304a; border-radius:10px; padding:12px 14px; }
-    .result.ok{ border-color:#14532d; color:#86efac; }
-    .result.err{ border-color:#4c1d1d; color:#fecaca; }
+    .result{ margin-top:14px; font-size:16px; line-height:1.6; background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:12px 14px; }
+    .result.ok{ border-color:#10b981; color:#065f46; }
+    .result.err{ border-color:#f87171; color:#dc2626; }
     .section{ margin-top:18px; }
-    code{ background:#0b1220; border:1px solid #22304a; padding:1px 6px; border-radius:6px; }
-    .footer{ margin-top:26px; text-align:center; color:#9ca3af; font-size:12px; }
+    code{ background:#f1f5f9; border:1px solid #cbd5e1; padding:1px 6px; border-radius:6px; color:#475569; }
+    .footer{ margin-top:26px; text-align:center; color:#64748b; font-size:12px; }
     </style>
 </head>
 <body>
@@ -195,15 +195,18 @@
             for(const row of rows){
                 if(!row || row.length < 2) continue;
                 const rawKey = row[0];
-                const rawVal = row[1];
+                const rawAnswer = row[1];
+                const rawRelated = row[2] || ''; // 第三欄：類近題目
                 const key = normalizeKey(rawKey);
-                const val = normalizeCell(String(rawVal));
+                const answer = normalizeCell(String(rawAnswer));
+                const related = normalizeCell(String(rawRelated));
                 // 跳過常見表頭
                 if(key === '編號' || key === '编号' || key === 'ID' || key === 'CODE'){
                     continue;
                 }
                 if(key !== ''){
-                    codeToAnswer.set(key, val);
+                    // 儲存為物件，包含答案和類近題目
+                    codeToAnswer.set(key, { answer, related });
                 }
             }
         }
@@ -241,9 +244,17 @@
                 for(const k in obj){
                     if(Object.prototype.hasOwnProperty.call(obj, k)){
                         const key = normalizeKey(k);
-                        const val = String(obj[k] ?? '');
+                        const val = obj[k];
                         if(key !== ''){
-                            codeToAnswer.set(key, val);
+                            // 支援舊格式（純字串）和新格式（物件）
+                            if(typeof val === 'string'){
+                                codeToAnswer.set(key, { answer: val, related: '' });
+                            } else if(typeof val === 'object' && val !== null){
+                                codeToAnswer.set(key, { 
+                                    answer: String(val.answer || ''), 
+                                    related: String(val.related || '') 
+                                });
+                            }
                         }
                     }
                 }
@@ -289,8 +300,16 @@
                 return;
             }
             if(codeToAnswer.has(code)){
-                const answer = String(codeToAnswer.get(code) ?? '');
-                const html = `答案：` + escapeHtml(answer).replace(/\n/g, '<br>');
+                const data = codeToAnswer.get(code);
+                const answer = String(data?.answer ?? '');
+                const related = String(data?.related ?? '');
+                
+                let html = `<div style="margin-bottom: 12px;"><strong>答案：</strong><br>${escapeHtml(answer).replace(/\n/g, '<br>')}</div>`;
+                
+                if(related.trim() !== ''){
+                    html += `<div style="border-top: 1px solid #374151; padding-top: 12px;"><strong>類近題目：</strong><br>${escapeHtml(related).replace(/\n/g, '<br>')}</div>`;
+                }
+                
                 resultEl.innerHTML = html;
                 resultEl.style.color = '#0b8457';
                 resultEl.classList.remove('err');
