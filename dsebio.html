@@ -285,7 +285,7 @@
             const code = normalizeKey(codeInput.value);
             if(code === ''){
                 resultEl.textContent = '請先輸入編號。';
-                resultEl.style.color = '#b00020';
+                resultEl.style.color = '#dc2626';
                 resultEl.classList.remove('ok');
                 resultEl.classList.add('err');
                 resultEl.style.display = '';
@@ -293,7 +293,7 @@
             }
             if(codeToAnswer.size === 0){
                 resultEl.textContent = '尚未載入答案資料，請先提供 CSV。';
-                resultEl.style.color = '#b00020';
+                resultEl.style.color = '#dc2626';
                 resultEl.classList.remove('ok');
                 resultEl.classList.add('err');
                 resultEl.style.display = '';
@@ -307,17 +307,17 @@
                 let html = `<div style="margin-bottom: 12px;"><strong>答案：</strong><br>${escapeHtml(answer).replace(/\n/g, '<br>')}</div>`;
                 
                 if(related.trim() !== ''){
-                    html += `<div style="border-top: 1px solid #374151; padding-top: 12px;"><strong>類近題目：</strong><br>${escapeHtml(related).replace(/\n/g, '<br>')}</div>`;
+                    html += `<div style="border-top: 1px solid #cbd5e1; padding-top: 12px;"><strong>類近題目：</strong><br>${escapeHtml(related).replace(/\n/g, '<br>')}</div>`;
                 }
                 
                 resultEl.innerHTML = html;
-                resultEl.style.color = '#0b8457';
+                resultEl.style.color = '#065f46';
                 resultEl.classList.remove('err');
                 resultEl.classList.add('ok');
                 resultEl.style.display = '';
             }else{
                 resultEl.textContent = '找不到此編號的答案。';
-                resultEl.style.color = '#b00020';
+                resultEl.style.color = '#dc2626';
                 resultEl.classList.remove('ok');
                 resultEl.classList.add('err');
                 resultEl.style.display = '';
