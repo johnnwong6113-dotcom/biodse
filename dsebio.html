@@ -291,30 +291,18 @@
             }
         }
 
-        async function fetchCsvOnce(name){
-            const resp = await fetch(name, { cache: 'no-store' });
-            if(!resp.ok) return null;
-            return await resp.text();
-        }
-
         async function tryLoadDefaultCsv(){
             try{
-                // 先嘗試覆蓋檔，再退回預設
-                let text = await fetchCsvOnce('answers_override.csv');
-                if(text !== null){
-                    parseCsv(text);
-                    showStatus(`已載入 answers_override.csv（共 ${codeToAnswer.size} 條）。`);
+                const resp = await fetch('answers.csv', { cache: 'no-store' });
+                if(!resp.ok){
+                    showStatus('未找到 answers.csv，請上載 CSV 檔。', true);
                     return;
                 }
-                text = await fetchCsvOnce('answers.csv');
-                if(text !== null){
-                    parseCsv(text);
-                    showStatus(`已載入 answers.csv（共 ${codeToAnswer.size} 條）。`);
-                    return;
-                }
-                showStatus('未找到 answers.csv，請上載 CSV 檔。', true);
+                const text = await resp.text();
+                parseCsv(text);
+                showStatus(`已載入 answers.csv（共 ${codeToAnswer.size} 條）。`);
             }catch(err){
-                showStatus('讀取 CSV 時出錯，請手動上載。', true);
+                showStatus('讀取 answers.csv 時出錯，請手動上載。', true);
             }
         }
 
