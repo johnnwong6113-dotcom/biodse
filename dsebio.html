@@ -100,6 +100,31 @@
                 .replace(/'/g, '&#039;');
         }
 
+        // 將答案文字轉為可安全顯示的 HTML，僅放行 <img> 標籤與其基本屬性
+        function renderRich(text){
+            const escaped = escapeHtml(String(text ?? ''));
+            // 允許 <img ...>，僅允許 src 為 http/https 或相對路徑（含 images/）
+            return escaped.replace(/&lt;img\s+([^>]*?)&gt;/gi, function(_, rawAttrs){
+                const srcMatch = rawAttrs.match(/src\s*=\s*['\"]([^'\"]+)['\"]/i);
+                if(!srcMatch) return _; // 無 src 不放行
+                const src = srcMatch[1];
+                const isSafeSrc = /^(https?:\/\/|\.\/?|images\/)/i.test(src);
+                if(!isSafeSrc) return _; // 僅允許安全來源
+
+                // 選擇性保留 alt 與 style
+                const altMatch = rawAttrs.match(/alt\s*=\s*['\"]([^'\"]*)['\"]/i);
+                const styleMatch = rawAttrs.match(/style\s*=\s*['\"]([^'\"]*)['\"]/i);
+
+                const safeParts = [
+                    `src="${src}"`,
+                    `loading="lazy"`,
+                    `style="max-width:100%; height:auto; margin:10px 0; border-radius:8px;${styleMatch ? ' ' + styleMatch[1] : ''}"`
+                ];
+                if(altMatch){ safeParts.push(`alt="${escapeHtml(altMatch[1])}"`); }
+                return `<img ${safeParts.join(' ')} />`;
+            });
+        }
+
         function stripWrappingQuotes(text){
             if(!text) return text;
             if((text.startsWith('"') && text.endsWith('"')) || (text.startsWith("'") && text.endsWith("'"))){
@@ -304,10 +329,10 @@
                 const answer = String(data?.answer ?? '');
                 const related = String(data?.related ?? '');
                 
-                let html = `<div style="margin-bottom: 12px;"><strong>答案：</strong><br>${escapeHtml(answer).replace(/\n/g, '<br>')}</div>`;
+                let html = `<div style="margin-bottom: 12px;"><strong>答案：</strong><br>${renderRich(answer).replace(/\n/g, '<br>')}</div>`;
                 
                 if(related.trim() !== ''){
-                    html += `<div style="border-top: 1px solid #cbd5e1; padding-top: 12px;"><strong>類近題目：</strong><br>${escapeHtml(related).replace(/\n/g, '<br>')}</div>`;
+                    html += `<div style=\"border-top: 1px solid #cbd5e1; padding-top: 12px;\"><strong>類近題目：</strong><br>${renderRich(related).replace(/\n/g, '<br>')}</div>`;
                 }
                 
                 resultEl.innerHTML = html;
