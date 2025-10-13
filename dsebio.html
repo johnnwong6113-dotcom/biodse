@@ -103,13 +103,13 @@
         // 將答案文字轉為可安全顯示的 HTML，僅放行 <img> 標籤與其基本屬性
         function renderRich(text){
             const escaped = escapeHtml(String(text ?? ''));
-            // 允許 <img ...>，僅允許 src 為 http/https 或相對路徑（含 images/）
-            return escaped.replace(/&lt;img\s+([^>]*?)&gt;/gi, function(_, rawAttrs){
+            // 允許 <img ...> 或 <img ... />，屬性可跨行
+            return escaped.replace(/&lt;img\s+([\s\S]*?)\/?&gt;/gi, function(full, rawAttrs){
                 const srcMatch = rawAttrs.match(/src\s*=\s*['\"]([^'\"]+)['\"]/i);
-                if(!srcMatch) return _; // 無 src 不放行
+                if(!srcMatch) return full; // 無 src 不放行
                 const src = srcMatch[1];
                 const isSafeSrc = /^(https?:\/\/|\.\/?|images\/)/i.test(src);
-                if(!isSafeSrc) return _; // 僅允許安全來源
+                if(!isSafeSrc) return full; // 僅允許安全來源
 
                 // 選擇性保留 alt 與 style
                 const altMatch = rawAttrs.match(/alt\s*=\s*['\"]([^'\"]*)['\"]/i);
@@ -291,18 +291,30 @@
             }
         }
 
+        async function fetchCsvOnce(name){
+            const resp = await fetch(name, { cache: 'no-store' });
+            if(!resp.ok) return null;
+            return await resp.text();
+        }
+
         async function tryLoadDefaultCsv(){
             try{
-                const resp = await fetch('answers.csv', { cache: 'no-store' });
-                if(!resp.ok){
-                    showStatus('未找到 answers.csv，請上載 CSV 檔。', true);
+                // 先嘗試覆蓋檔，再退回預設
+                let text = await fetchCsvOnce('answers_override.csv');
+                if(text !== null){
+                    parseCsv(text);
+                    showStatus(`已載入 answers_override.csv（共 ${codeToAnswer.size} 條）。`);
                     return;
                 }
-                const text = await resp.text();
-                parseCsv(text);
-                showStatus(`已載入 answers.csv（共 ${codeToAnswer.size} 條）。`);
+                text = await fetchCsvOnce('answers.csv');
+                if(text !== null){
+                    parseCsv(text);
+                    showStatus(`已載入 answers.csv（共 ${codeToAnswer.size} 條）。`);
+                    return;
+                }
+                showStatus('未找到 answers.csv，請上載 CSV 檔。', true);
             }catch(err){
-                showStatus('讀取 answers.csv 時出錯，請手動上載。', true);
+                showStatus('讀取 CSV 時出錯，請手動上載。', true);
             }
         }
 
