@@ -103,17 +103,17 @@
         // 將答案文字轉為可安全顯示的 HTML，僅放行 <img> 標籤與其基本屬性
         function renderRich(text){
             const escaped = escapeHtml(String(text ?? ''));
-            // 允許 <img ...> 或 <img ... />，屬性可跨行
-            return escaped.replace(/&lt;img\s+([\s\S]*?)\/?&gt;/gi, function(full, rawAttrs){
-                const srcMatch = rawAttrs.match(/src\s*=\s*['\"]([^'\"]+)['\"]/i);
+            // 允許 <img ...> 或 <img ... />，屬性可跨行；容忍 <<img ...>>
+            return escaped.replace(/&lt;{1,2}img\s+([\s\S]*?)\/?&gt;{0,2}/gi, function(full, rawAttrs){
+                const srcMatch = rawAttrs.match(/src\s*=\s*(?:'|"|&quot;|&#039;)([^'"&<>]+)(?:'|"|&quot;|&#039;)/i);
                 if(!srcMatch) return full; // 無 src 不放行
                 const src = srcMatch[1];
                 const isSafeSrc = /^(https?:\/\/|\.\/?|images\/)/i.test(src);
                 if(!isSafeSrc) return full; // 僅允許安全來源
 
                 // 選擇性保留 alt 與 style
-                const altMatch = rawAttrs.match(/alt\s*=\s*['\"]([^'\"]*)['\"]/i);
-                const styleMatch = rawAttrs.match(/style\s*=\s*['\"]([^'\"]*)['\"]/i);
+                const altMatch = rawAttrs.match(/alt\s*=\s*(?:'|"|&quot;|&#039;)([^'"&<>]*)(?:'|"|&quot;|&#039;)/i);
+                const styleMatch = rawAttrs.match(/style\s*=\s*(?:'|"|&quot;|&#039;)([^'"&<>]*)(?:'|"|&quot;|&#039;)/i);
 
                 const safeParts = [
                     `src="${src}"`,
