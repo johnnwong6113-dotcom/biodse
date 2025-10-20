@@ -17329,43 +17329,765 @@ If bacteria take up uncut original plasmids, their tetracycline‑resistance gen
 
 所以含有原始質粒的菌落對四環素仍具抗性，而含有重組質粒的菌落失去抗性。
 Hence colonies with original plasmids retain tetracycline resistance, whereas those with recombinant plasmids lose it. ",
-18p105,"""📌 參考答案
+22p101,"📌 參考答案
 
 (a)
-
-<<img src='images/18p105.png' />>
-
-男性的性染色體由一個 X 染色體和一個 Y 染色體組成。
-The sex chromosomes of a male consist of one X chromosome and one Y chromosome.
-
-X 染色體比 Y 染色體大得多，因此容易辨認。
-The X chromosome is much larger than the Y chromosome, making it easily identifiable.
+D = C − B − A − E
 
 (b)
-該染色體組型屬於體細胞。
-This karyotype belongs to a somatic cell.
+素食者的食物含有大量不能被消化的食用纖維。
+Vegetarian diets contain a large amount of dietary fibre which is indigestible.
 
-由於顯示出 23 對同源染色體，總共有 46 條染色體。
-This is because 23 pairs of homologous chromosomes are shown, giving a total of 46 chromosomes.
+這些不能被消化的物質會隨糞便排出體外。
+These indigestible materials cannot be absorbed and are egested as faeces.
 
-體細胞具有兩套染色體，因此是二倍體；而配子只有一套染色體。
-Somatic cells contain two sets of chromosomes and are diploid, whereas gametes contain only one set.
+因此，素食者經由糞便流失的能量多於非素食者。
+As a result, vegetarians lose more energy through faeces than non-vegetarians.
+
+所以素食者的 D/C 比值較非素食者為低。
+Therefore, the D/C ratio of vegetarians is lower than that of non-vegetarians.
+
+📘 詳細解釋
+素食者的食物主要是植物，而植物中含有大量不能被人類消化的食用纖維（如纖維素）。
+Vegetarian diets mainly consist of plants, which contain large amounts of dietary fibre such as cellulose that humans cannot digest.
+
+這些不能被消化的纖維無法被吸收為能量物質。
+These indigestible fibres cannot be absorbed as energy sources.
+
+它們會經由腸道形成糞便被排出體外。
+They are excreted from the digestive tract as faeces.
+
+因此，攝入的總能量（C）中，有相當一部分以排遺損失（B）的形式流失。
+As a result, a significant portion of the total energy intake (C) is lost through egestion (B).
+
+由於可供身體利用的能量減少，用於生長的能量（D）也相應減少。
+Because less energy is available for bodily use, the energy retained for growth (D) is also reduced.
+
+所以，素食者的 D/C 比值比非素食者低。
+Therefore, vegetarians have a lower D/C ratio than non-vegetarians.
+
+此外，肉類食物的能量密度通常比蔬菜高，易被吸收利用。
+Furthermore, meat generally has a higher energy density and is more readily absorbed than vegetables.
+
+因此，在相同的進食量下，非素食者能獲取更多可用能量用於生長。
+Hence, non-vegetarians can obtain more usable energy for growth from the same amount of food.
+
+📓 額外概念補充
+能量流動的關係可以用方程式表示：
+The energy flow relationship can be expressed as an equation:
+
+C（攝食）＝ A（排遺）＋ B（排泄）＋ D（生長）＋ E（呼吸）
+C (consumption) = A (egestion) + B (excretion) + D (growth) + E (respiration)
+
+只要某一項能量損失（如排遺 A 或排泄 B）增加，生長能量 D 便會相對下降，從而令 D/C 比值減少。
+Whenever any energy loss (e.g. through egestion A or excretion B) increases, the growth energy D will relatively decrease, leading to a lower D/C ratio.
+
+⚠️ 考試提醒
+解釋題要點要有「能量流動關聯」的邏輯。
+Always link your reasoning back to energy flow (C → losses → D).
+
+重點詞彙要出現：
+🔹 indigestible fibre（不能消化的纖維）
+🔹 egested as faeces（排出為糞便）
+🔹 energy loss through faeces（經糞便流失能量）
+🔹 lower D/C ratio（較低的 D/C 比值）
+
+別忘記指出「比較」對象：素食者 vs 非素食者。
+Always make a clear comparison between vegetarians and non-vegetarians.
+
+答案結構建議：三句法
+
+說明飲食特點 →
+Vegetarian diets contain more indigestible fibre.
+說明能量損失途徑 →
+Indigestible materials are egested as faeces, leading to energy loss.
+說明結果 →
+Therefore, vegetarians have a lower D/C ratio.",
+22p102,"📘 參考答案
+
+(a)
+答案：C ✅
+減數分裂在構造 C（睪丸 testis） 內進行。
+Meiosis takes place in structure C (testis).
+
+(b)
+構造 A： 分泌精液以滋養精子，並為精子游動提供液體介質。
+Structure A produces seminal fluid, which nourishes the sperm and provides a medium for sperm movement.
+
+構造 B： 暫時儲存精子 / 讓精子成熟。
+Structure B stores sperm temporarily / allows sperm to mature.
+
+(c)(i)
+答案：E ✅
+The vas deferens (E) is cut and tied in vasectomy.
+(c)(ii)
+當構造 E 被切斷及綁緊後，從構造 B 釋放出的精子不能通過 E 進入女性體內。
+When structure E is cut and tied, sperm released from structure B cannot pass through E to enter the female body.
+
+射出的精液內將不含精子，因此不會出現受精。
+Ejaculated semen no longer contains sperm, so fertilisation cannot occur.",
+22p103,"📘 參考答案
+
+(a)
+M：細胞壁（cell wall） ✅
+Structure M is the cell wall.
+
+(b)
+W 的實際長度：約 19 (±1) μm
+The actual length of W is about 19 (±1) μm.
+（⚠️若沒寫單位 μm 不給分）
 
 (c)
-母親的性染色體是 XX，而父親的是 XY。
-The mother has XX sex chromosomes, while the father has XY chromosomes.
+慢慢轉動微調節器，使葉綠體 2 的影像變得清晰。
+Rotate the fine adjustment knob slowly until the image of chloroplast 2 comes into focus.
 
-卵子只能含有 X 染色體，而精子則可含有 X 或 Y 染色體。
-The egg can only carry an X chromosome, while sperm may carry either an X or a Y chromosome.
+(d)
+基粒 / 類囊體 / 內膜 / 外膜（任寫一項即可）
+Granum / thylakoid membrane / inner membrane / outer membrane
 
-在受精過程中，後代的性別取決於精子攜帶的性染色體。
-During fertilisation, the sex of the offspring depends on which type of sperm fertilises the egg.
+(e)
+電子顯微鏡（electron microscope） ✅
+An electron microscope is used to observe the structures in (d).",
+22p104,"📘 參考答案
+(a)
+這名病人是 男性（male）。
+The patient is male.
 
-若卵子與帶有 X 染色體的精子結合，便形成女性；
-If the egg is fertilised by a sperm carrying an X chromosome, a female is formed;
+因為第 23 對染色體長度不同，顯示該對為一條 X 染色體和一條 Y 染色體（Y 較短）。
+Because the 23rd pair of chromosomes are of unequal length, indicating one X and one shorter Y chromosome.
 
-若精子帶有 Y 染色體，便形成男性。
-If the sperm carries a Y chromosome, a male is formed.
+(b)(i)
+第 15 對染色體多了一條染色體。
+There is an extra chromosome in the 15th pair (trisomy 15).
+(b)(ii)
+屬於 染色體突變 / 異常（chromosomal mutation）。
+It involves a chromosomal mutation.
+(b)(iii)
+由於第 15 對染色體含有三條拷貝，其上的基因表達量會上升，導致 mRNA 水平增加。
+The genes on the 15th pair are present in three copies, so the level of gene expression and mRNA increases.
+(c)
+✅ 此題有多組可行答案（任一方向得分）
 
-因此，決定後代性別的是父親，而非母親。
-Hence, it is the father, not the mother, who determines the sex of the offspring."",""""",
+方向一：平衡相關活動
+
+病人行走時容易跌倒或失去平衡 / 行走有困難。
+The patient may lose balance or have difficulty walking / may trip easily while walking.
+方向二：協調相關活動
+
+病人行動不順暢 / 無法直線行走 / 難以完成精細動作。
+The patient may not be able to walk in a straight line or perform fine, coordinated movements smoothly.",
+22p105,"📘 參考答案
+
+(a)
+自變量 (independent variable)： 所使用的酶的種類或組合
+Type(s) or combination(s) of enzyme(s) used
+因變量 (dependent variable)： 所生產的蘋果汁體積 / 量
+Volume / amount of apple juice produced
+
+(b)
+（以下任意一項均可得分 ✅）
+
+為了提高結果的可靠性及可重現性。
+To increase reliability and ensure that results are reproducible.
+取三次實驗平均值，以減少個別誤差影響。
+Averaging three sets of results reduces experimental or individual error.
+令得到的數據更接近真值或方便統計分析。
+To obtain a value closer to the true value or for statistical analysis.
+
+(c)
+燒杯	生產 1 mL 蘋果汁所需酶的成本
+A	—
+B	$0.42
+C	$1.75
+D	$0.29
+
+(d)
+最具成本效益的為：燒杯 D ✅
+The most cost-effective method is using a mixture of 0.25 mL pectinase and 0.25 mL cellulase (beaker D), as it requires the least enzyme cost per mL of juice produced.
+(e)
+果膠酶與纖維素酶能將蘋果蓉細胞壁中的果膠和纖維素分解為可溶性物質。
+Pectinase and cellulase break down the pectin and cellulose in the apple pulp cell wall into soluble substances.
+因此，燒杯 D 所得的蘋果汁含有更多可溶成分，較燒杯 A 的汁液更清澈。
+Hence, the juice from beaker D contains more soluble compounds and is clearer than that from beaker A.",
+22p106,"📌 參考答案 (Reference Answer)
+
+(a)
+細胞類型 Q (Cell type Q)
+在圖中，細胞類型 Q 靠近多條微血管。
+In the diagram, cell type Q is located close to several blood capillaries.
+由於激素是經血液運輸的，這顯示細胞 Q 會將激素釋放到血液中。
+Since hormones are transported by the bloodstream, this suggests that cell Q releases hormones directly into the blood.
+✅ **另一可行答案：**細胞 Q 沒有導管連接，因此分泌物不經導管排出，只能進入血液。
+✅ Alternative acceptable answer: Cell Q is not connected to any duct, so its secretions must be released into the blood rather than through a duct.
+
+(b)
+慢跑時肌肉持續吸收血糖作為呼吸作用的能量來源。
+During jogging, muscles continuously take up glucose from the blood for respiration to release energy.
+血糖下降會刺激胰臟分泌更多胰高血糖素、較少胰島素。
+As blood glucose level drops, the pancreas secretes more glucagon and less insulin.
+胰高血糖素刺激肝細胞把糖原分解為葡萄糖。
+Glucagon stimulates liver cells to convert stored glycogen into glucose.
+生成的葡萄糖釋放至血液，使血糖水平回復正常。
+The glucose is released into the bloodstream, bringing the blood glucose level back to normal.",
+22p107,"📌 參考答案 (Reference Answer)
+
+(a)
+階段 E 具有最高擴散風險。
+Stage E has the highest risk of metastasis.
+腫瘤細胞已生長至包含血管的更深層組織，可穿越結締組織進入血液循環，擴散至身體其他部位。
+Tumour cells have grown into deeper tissue containing blood vessels, breaking through connective tissue and spreading via the bloodstream to other parts of the body.
+(b)(i)
+老年人暴露於致癌因素的時間較長，累積突變機會較多。
+Elderly people have lived longer, giving more time for mutation accumulation.
+他們的修復能力與免疫系統較弱，減低抑制腫瘤生長的效果。
+Their repair ability and immune system are weaker, reducing suppression of tumour development.
+(b)(ii)
+大腸癌需多年才可由腺瘤演變至惡性階段。
+It takes many years for adenomas in the colon to progress into malignant tumours.
+因此如未發現異常隆起物，可在 5 年後再檢查，趕在癌細胞擴散前發現並清除。
+Hence, if no abnormal growth is found, colonoscopy every five years allows early detection before spreading occurs.
+(b)(iii)
+任選兩項：
+
+飲食中膳食纖維攝取不足。
+Insufficient dietary fibre in the diet.
+進食大量紅肉或加工肉類，含致癌物質。
+High consumption of red or processed meat containing carcinogens.
+進食大量油炸食物，產生致癌物質。
+Eating a large amount of deep-fried food that forms carcinogenic compounds during frying.",
+22p108,"📌 參考答案 (Reference Answer)
+
+(a)(i)
+草原的水供應有限，是促使根部向下延伸的選擇壓力。
+Water supply acts as the selection force driving the evolution of deeper roots in grasslands.
+根較深的高草能從地下獲取更多水分，因而具有生存優勢。
+Grasses with deeper roots can obtain more water from deeper soil layers, giving them a selective advantage.
+
+(a)(ii)
+淺根系需較少能量生長，更多能量可用於地上部分的發育。
+A shallow root system requires less energy to develop, allowing more energy for shoot growth.
+生長良好的莖葉光合作用速率較高，有助種子或果實的生長和更高的收成。
+Better-developed shoots achieve higher photosynthetic rates, supporting seed and fruit development and leading to higher yield.
+
+(b)(i)
+結構 (Structure)	可見特徵 (Observable feature)	功能 (Function)
+X	管腔大而中空，細胞壁厚	減少運輸阻力，防止坍塌，維持導管暢通
+X(large empty lumen / hollow; thick cell wall)(offers less resistance to water transport; prevents collapse of the vessel and keeps the vessel open)
+Y	細長且具根毛	穿入土壤間隙，增加吸水及吸礦物質的表面積
+Y(slender / elongated and has root hairs)(penetrates the spaces between soil particles; increases surface area for absorption of water and minerals)
+
+(b)(ii)
+蒸騰作用導致葉片細胞失水，產生蒸騰拉力，將水沿構造 X 上升。
+Transpiration from leaves creates a pull that draws water upward through structure X.
+吸水使 Y 維持高水勢，鄰近細胞水勢下降，形成水勢梯度。
+Water absorption at Y maintains a high water potential there, while adjacent cells have lower water potential, forming a gradient.
+水沿水勢梯度由 Y 傳至 X，完成由根毛到導管的輸水過程。
+Water moves from Y to X along the water potential gradient, completing the pathway from root hairs to xylem vessels.",
+22p109,"📌 參考答案 Reference Answer
+
+(a)
+抗生素如何殺死或抑制細菌生長（任寫三項）：
+Antibiotics kill or inhibit bacterial growth by any three of the following:
+
+抑制細菌細胞壁的形成。
+→ Inhibit the formation of bacterial cell wall.
+破壞細菌細胞膜，使細胞裂解死亡。
+→ Destroy the bacterial cell membrane, leading to lysis and death.
+抑制蛋白質或核酸的合成，阻礙細菌的新陳代謝或繁殖。
+→ Inhibit protein or nucleic acid synthesis, interfering with bacterial metabolism or reproduction.
+(b)(i)
+合成多核苷酸應與mRNA序列中的下列鹼基配對：
+UCA CUG AGC CAG UCG
+→ Synthetic polynucleotide pairs with these bases on mRNA.
+(b)(ii)
+當合成多核苷酸與抗生素抗性基因的 mRNA 結合後，該區域成為雙股結構。
+→ When the synthetic polynucleotide binds to the antibiotic-resistance mRNA, the binding region becomes double-stranded.
+導致tRNA或核糖體無法結合到該 mRNA。
+→ This prevents tRNA or ribosomes from binding to the mRNA.
+結果轉譯過程被中斷，蛋白質無法正確形成；抗性酶失去分解抗生素 X 的功能。
+→ Translation is halted, producing no functional enzyme to break down antibiotic X.
+(b)(iii)
+（任選其一 Any one of the following）
+
+一旦知道抗生素抗性基因的序列，即可設計新的對應合成多核苷酸。
+→ New complementary synthetic polynucleotides can be designed once the gene sequence is known.
+作用針對性強，可減少為應付抗性細菌而進行的抗生素開發成本。
+→ Highly specific action reduces the need and cost for developing new antibiotics.",
+22p110,"📌 參考答案 Reference Answer（中英對照版，CSV 友善點列格式）
+
+(a)
+→ 1a → 2a → 3b, group S.
+
+(b)
+最初 Habenaria 物種的某些個體花朵色澤變深（呈紅色），另一些維持淡色。
+→ Initially, some individuals of Habenaria had darker reddish flowers, while others remained pale.
+具紅色花的植株吸引了一群特定的傳粉昆蟲，而淡色花的植株吸引不同昆蟲；兩者之間不再發生雜交。
+→ The reddish flowers attracted one type of pollinating insect, while the pale flowers attracted another, preventing cross‑pollination.
+這種繁殖隔離導致基因流動中止，兩族群獨立累積突變並分化為新物種 — H. rhodochila。
+→ This reproductive isolation stopped gene flow, allowing the two populations to accumulate mutations independently, eventually forming a new species, H. rhodochila.
+
+(c)(i)
+為確保數據不受位置影響，需定時交換兩個裝置的位置。
+→ The positions of the two set‑ups were swapped periodically to eliminate location effects.
+這樣可抵銷環境條件差異（如光照、風向）對昆蟲選擇的影響。
+→ This controls for environmental differences (e.g. light or wind) that might bias insect visits.
+(c)(ii)
+設定 1： 昆蟲物種 A 對透明無孔容器內的花探訪次數（43 次）遠高於對照組（1 次），顯示牠被花朵外觀吸引。
+→ In Set‑up 1, species A visited the transparent container much more often (43 vs 1), indicating attraction by flower appearance.
+設定 2： 在不透明有孔容器下，探訪次數近似（1 vs 1 次），表示牠並未被花香吸引。
+→ In Set‑up 2, visits to the smell test and control (1 vs 1) were similar, showing no response to scent.
+
+(c)(iii)
+✅ 設定 4 ：相應對照裝置的條件
+有植物 ✓
+→ With plant ✓
+透明容器 ✓
+→ Transparent container ✓
+容器無孔 ✓
+→ Container without holes ✓
+✅ 設定 5 ：相應對照裝置的條件
+有植物 ✓
+→ With plant ✓
+不透明容器 ✓
+→ Opaque container ✓
+容器有孔 ✓
+→ Container with holes ✓",
+22p111,"📍參考答案摘要（符合評分準則）
+1️⃣ 控制血糖水平（最多 3 分）
+
+與一般飲食相比，生酮飲食碳水化合物含量低，能減少消化吸收後產生的葡萄糖量，使血糖上升較緩。
+經代謝後只產生少量葡萄糖。
+糖尿病患者胰島素不足以有效調節血糖，採用生酮飲食後血糖仍可保持在可管理範圍。
+2️⃣ 能量平衡與減重（最多 4 分）
+
+想減重需讓能量攝取小於能量消耗。
+酮飲食低碳水時，身體會使用肝醣或轉用脂肪作能量來源。
+高脂肪膳食每克能量高（≈ 38 kJ/g），若控制攝取量仍可燃燒體脂減重。
+酮飲食初期的體重下降多因水分與糖原消耗。
+3️⃣ 健康顧慮（最多 2 分）
+
+高脂飲食可能導致膽固醇積聚，引發心血管疾病風險。
+缺乏蔬果與膳食纖維易導致便秘、維生素缺乏。
+低碳水會使腦部缺乏葡萄糖來源，導致疲倦或頭暈。
+📍示範短文答案（中英對照、逐句對應）
+🌿 引言 (Introduction)
+近年來，生酮膳食因其潛在的減重與控糖效果受到關注。
+In recent years, ketogenic diets have gained attention for their potential effects on weight loss and blood glucose control.
+
+生酮膳食是高脂肪、中等蛋白質、極低碳水化合物的飲食模式。
+A ketogenic diet is a high‑fat, moderate‑protein, and very low‑carbohydrate diet.
+
+這種飲食會迫使身體以脂肪而非碳水化合物作為主要能量來源。
+This diet forces the body to use fat instead of carbohydrates as its main energy source.
+
+🍬 一、生酮膳食對血糖的控制作用 (Effect on blood glucose control)
+由於生酮膳食幾乎不含碳水化合物，可減少消化吸收後產生的葡萄糖量。
+Since ketogenic diets are very low in carbohydrates, they reduce the amount of glucose produced after digestion and absorption.
+
+因此糖尿病患者的血糖上升不會像一般飲食般急劇。
+As a result, diabetics experience a slower rise in blood glucose levels compared with normal diets.
+
+而且脂肪分解後僅產生少量葡萄糖，進一步穩定血糖水平。
+Moreover, fat metabolism yields only a small amount of glucose, further stabilizing blood sugar levels.
+
+由於糖尿病患者不能有效利用胰島素，這樣的飲食能幫助他們更容易控制血糖。
+Because diabetics cannot regulate blood glucose efficiently using insulin, this diet helps keep their blood sugar within a manageable range.
+
+⚖️ 二、生酮膳食與減重的可行性 (Feasibility of using ketogenic diet for weight loss)
+成功減重的關鍵在於能量攝取低於身體每日所需能量。
+Successful weight loss depends on maintaining energy intake lower than daily energy expenditure.
+
+低碳水化合物時，身體會消耗儲存的肝醣與脂肪作能量來源。
+When carbohydrate intake is limited, the body burns stored glycogen and fat as energy sources.
+
+由於脂肪含量高、能量密度大，即使進食量相同，身體也能優先消耗脂肪儲備。
+Because fat is energy‑dense, even at the same food volume the body will be forced to use fat reserves for energy.
+
+在能量缺口維持情況下，體重便會逐漸下降。
+With a sustained energy deficit, body weight gradually decreases.
+
+不過，初期減重多來自水分與糖原分解，而非純粹體脂減少。
+However, early weight loss is mainly due to water loss and glycogen depletion rather than pure fat reduction.
+
+❤️ 三、對健康人士的潛在健康顧慮 (Health concerns for healthy individuals)
+長期攝取高脂肪可能引致動脈硬化或心血管疾病風險。
+Prolonged intake of high‑fat foods may increase the risk of atherosclerosis and cardiovascular disease.
+
+缺乏全穀類與水果等碳水化合物來源會導致膳食纖維及維生素攝取不足。
+The lack of whole grains and fruits may reduce dietary fiber and vitamin intake.
+
+此外，大腦以葡萄糖為主要能量，極低碳水可能令血糖過低，引致頭暈和疲倦。
+In addition, as the brain mainly uses glucose for energy, very low carbohydrate intake can cause low blood sugar, dizziness, and fatigue.
+
+長遠而言，此飲食可能難以維持，亦不適合成長中兒童或孕婦。
+In the long term, such a diet may be difficult to sustain and is not suitable for growing children or pregnant women.
+
+🌻 結論 (Conclusion)
+總括而言，生酮膳食能幫助糖尿病患者改善血糖控制，並在短期內促進減重。
+In conclusion, ketogenic diets can help diabetic patients stabilize blood glucose and promote short‑term weight loss.
+
+但長期使用可能導致營養不均與心血管風險上升。
+However, prolonged use may cause nutritional imbalance and increase cardiovascular risk.
+
+因此，健康人士應謹慎採用，並在專業人士指導下調整膳食內容。
+Therefore, healthy individuals should adopt it cautiously and seek professional guidance before long‑term practice.",
+22p201a,"📍參考答案
+(i) 
+腎小球的高血壓迫使血漿中的水分被壓出血管。
+High blood pressure in the glomerulus forces water from the blood plasma out of the capillaries. (1)
+
+水分及小分子經過腎小球與鮑氏囊的過濾膜進入鮑氏囊腔，形成腎小球濾液。
+Water and small solutes pass through the filtration membrane of the glomerulus and Bowman’s capsule to form the glomerular filtrate. (1)
+
+(ii)
+大部分的水分在區域 A 被重吸收。
+The majority of water is reabsorbed within region A. (1)
+
+(iii)
+每日產生 180 L 腎小球濾液，約 71% 的水分在區域 A 被吸收，吸收體積為 127.8 L。
+Given an average of 180 L of glomerular filtrate per day, with 71% reabsorbed in region A, the volume of water absorbed is 127.8 L. (1)
+
+(iv)
+在區域 A ，大部分有用物質以主動運輸方式被吸收入血液中。
+Along region A, most useful substances in the filtrate are actively transported into the blood. (1)
+
+這些溶質被吸收後，使血液的水勢顯著低於剩餘濾液。
+The absorption of these solutes lowers the water potential of the blood relative to the filtrate. (1)
+
+因此水分沿水勢梯度由濾液進入血液，產生滲透作用。
+Hence, water moves by osmosis along the water potential gradient from the filtrate into the blood. (1)
+
+(v)
+在脫水時，區域 C 內腎小球濾液體積百分比低於正常情況。
+Under dehydration, the relative volume of filtrate remaining in region C is lower than in the normal condition. (1)
+
+因血液水勢降低，導致下丘腦滲透感受器受刺激。
+This is because the lower blood water potential stimulates the osmoreceptors in the hypothalamus. (1)
+
+刺激使後葉垂體釋放更多 ADH 抗利尿激素。
+The stimulation results in the release of more ADH from the posterior pituitary gland. (1)
+
+ADH 增加了區域 C 集合管對水的通透性，使更多水被重吸收入血。
+ADH increases the permeability of the collecting duct (region C) to water, allowing more water to be reabsorbed into the blood. (1)",
+22p201b,"📍參考答案
+(i)
+患者的呼吸深度在任何時間都比健康人士低。
+The breathing depth of the patients was lower than that of the healthy persons at all times. (1)
+
+患者的呼吸深度在運動初期已達到最大值，而健康人士在較後才達到峰值。
+The patients reached their maximum breathing depth earlier than the healthy persons. (1)
+
+(ii)
+由於患者的肺組織硬化導致肺彈性降低。
+The hardening of lung tissues in the patients reduced their elasticity. (1)
+
+肺部無法充分擴張，因此每次吸入的空氣量減少。
+As a result, the lungs could not fully expand, limiting the volume of air inhaled during each breath. (1)
+
+(iii)
+血漿氧水平是決定呼吸速率變化的主要因素。
+The plasma oxygen level is the key factor influencing the change in breathing rate. (1)
+
+患者的呼吸速率與血漿氧水平呈現相似變化趨勢。
+There is a similar trend between the breathing rate and plasma oxygen level in the patients. (1)
+
+健康人士與患者的血漿二氧化碳水平變化相近，因此可排除二氧化碳為主因。
+Since both groups showed similar plasma carbon dioxide levels, carbon dioxide can be ruled out as the main factor. (1)
+
+患者的血漿氧水平逐漸下降，而健康人士的血氧水平維持穩定。
+The plasma oxygen level of the patients gradually decreased, while it remained stable in healthy persons. (1)
+
+(iv)
+由於血氧水平持續下降，患者的大腦缺乏足夠氧氣供應。
+Because the decreasing plasma oxygen level limits oxygen delivery to the brain in patients. (1)
+
+因此患者會感到頭暈。
+Therefore, the patients would feel dizzy. (1)",
+22p202a,"📍參考答案
+(i)
+將熱帶雨林改變為草原後，植物的平均高度及植物物種的數目均會減少。
+Converting the rainforest into grassland reduces both the average plant height and the number of plant species. (1)
+
+由於植物高度差距大，數目與生物量不成比例，故以物種覆蓋率表示結果較為合理。
+Because plant sizes differ greatly, using percent coverage rather than species count better represents community composition. (1)
+
+砍伐令群落被少數優勢物種主導，例如物種 H 的覆蓋率達 95%，而其他物種的覆蓋率顯著下降，物種組成變得單一。
+Deforestation leads to dominance by a few species (e.g., species H with 95% coverage) while others decrease markedly, making the community composition less diverse. (1)
+
+(ii)(1)
+砍伐會降低土壤的孔隙度，導致土壤中的氧氣水平下降。
+Deforestation reduces soil porosity, resulting in lower oxygen levels in the soil. (1)
+
+這顯示伐林會令土壤的透氣性減弱，水分滯留量增加。
+This implies lower soil aeration and higher water retention. (1)
+
+(ii)(2)(I)
+有氧條件下降會減慢有機氮轉化為銨化合物的速率，因該過程需氧。
+Reduced oxygen slows down the decomposition/ conversion of organic nitrogen to ammonium compounds, which is an aerobic process. (1)
+
+因此草原土壤中的銨化合物含量較雨林低。
+Hence, the amount of ammonium compounds in grassland soil is lower than in the primary rainforest. (1)
+
+(ii)(2)(II)
+同樣，由於硝化作用是需氧過程，氧氣下降會減慢硝化速率。
+Similarly, the nitrification rate decreases because it requires oxygen. (1)
+
+再者，草原土壤的反硝化作用會增加，使無機氮化合物含量進一步下降。
+In addition, enhanced denitrification in grassland soil further reduces the total amount of inorganic nitrogen compounds compared with the rainforest. (1)",
+22p202b,"📍參考答案
+(i)
+樹木根系可鞏固水塘周圍的土壤，防止水土流失及侵蝕，減少泥沙沖入水塘。
+The root systems of trees help bind and stabilize the soil around the reservoir, preventing soil erosion and reducing sediment flow into the reservoir. (1)
+
+同時，樹冠可截留雨水及減低地表逕流，避免泥沙淤積於水塘內，有助維持蓄水量及水質。
+The canopy intercepts rainfall and reduces surface runoff, thus preventing siltation and maintaining both water storage and quality. (1)
+
+(ii)(1)
+次級森林是指在原生森林被破壞後，經自然重新生長而形成的森林。
+A secondary forest refers to a forest that regenerates naturally after the original one has been disturbed or cleared. (1)
+
+(ii)(2)
+森林對鳥類群落的重要性可從多方面說明，下列任選兩項均屬合理答案：
+
+提供食物來源──森林中的植物產生果實、種子、花蜜或棲息昆蟲，為鳥類提供主要食糧。
+Forests provide food sources such as fruits, seeds, nectar, or insects for birds.
+
+提供棲息地與庇護所──鳥類可在樹林中築巢、休息或繁殖，並藉此避開天敵。
+Forests offer shelter, nesting sites, and hiding places from predators.
+
+繁殖與育雛之地──樹枝、樹洞及濃密葉冠能為鳥類提供安全的繁殖場所。
+Branches, tree holes, and dense canopies provide safe nesting and breeding sites.
+
+維持適宜的小氣候──森林能調節溫度與濕度，營造適合鳥類棲息的環境。
+Forests regulate temperature and humidity, creating a favorable microclimate for birds.
+
+增加棲地多樣性──多層次的植被結構（喬木、灌木、地被植物）能支援不同生態位的鳥類。
+The stratified vegetation structure (trees, shrubs, ground covers) supports birds occupying different ecological niches.
+
+
+
+(ii)(3)
+可舉出下列任一項：
+
+鳥類可幫助傳播或授粉樹木的種子。
+(Birds help in seed dispersal or pollination of trees.)
+鳥類能協助清除樹木上的害蟲。
+(Birds help control insect pests on trees.)
+鳥類的排泄物或屍體分解後可增加土壤養分。
+(Bird droppings or decomposed bodies enrich the nutrient content of the soil.) (1)
+
+(ii)(4)
+本地樹木物種對本地鳥類群落有較大貢獻。
+Native tree species contribute more to local bird communities. (1)
+
+因為次級森林中依賴森林棲息地的鳥種比例較高，而外來樹木的森林對此類鳥類支援較少。
+Because secondary forests with native trees host a higher proportion of forest-dependent bird species, while exotic tree forests support fewer. (1)
+
+此外，次級森林中鳥類的種數及巢數均較多，顯示該環境對本地鳥類更有利。
+There are also more bird species and nests found in the secondary (native) forest, showing that the environment is more favorable to local birds. (1)
+
+因此，本地樹木群落維持了更豐富的鳥類多樣性。
+Thus, the native tree composition sustains a richer and more diverse bird community. (1)",
+22p203a,"📍參考答案
+(i)
+在培育期間，細菌在瓊脂表面生長繁殖，形成混濁區域；而透明區域則代表細菌被搓手液殺死或抑制生長。
+During incubation, bacteria grew on the agar surface forming cloudy regions; clear zones indicate where bacteria were killed or inhibited by the hand sanitiser. (2)
+
+(ii)
+透明區的直徑愈大，代表搓手液的抗菌能力愈強。
+The larger the diameter of the clear zone, the greater the antibacterial effect. (1)
+由圖可見：Y < X < Z。 (1)
+
+(iii)
+否。此測試只能顯示搓手液對細菌的抑制作用，而COVID‑19 是由病毒引起，兩者不同，因此該測試不能顯示抗病毒效能。
+No. The test only shows antibacterial effects; since COVID‑19 is caused by a virus, it cannot demonstrate antiviral effects. (2)
+
+(iv)
+以下兩組作答均可各取兩項：
+
+✅ 組合一：防止空氣中微生物污染（近火焰區操作）
+
+在燃燒的本生燈旁進行塗抹，以產生上升氣流，防止其他空氣中微生物落到瓊脂平板上。
+Spread near a Bunsen flame to create an upward air current that prevents airborne microbes from reaching the agar plate. (1)
+塗抹時不要說話或呼吸在平板上，或應佩戴口罩，以防口鼻中的細菌污染培養皿。
+Do not speak or breathe over the plate (or wear a mask) to avoid contamination from our mouth or nose. (1)
+✅ 組合二：防止操作時接觸污染
+
+只部分打開培養皿蓋，不要完全打開，以減少空氣中微生物進入的機會。
+Lift the lid only slightly to reduce the chance of airborne microbes entering. (1)
+使用前應以火焰灼燒滅菌接種棒，使用後也應再次火焰滅菌，以避免交叉污染。
+Sterilise the inoculating loop by flaming before and after use to prevent contamination. (1)",
+22p203b,"📍參考答案
+(i)
+文字方程式：
+
+葡萄糖 → 乙醇 + 二氧化碳
+Glucose → ethanol + carbon dioxide
+✅ 或者：「葡萄糖 → 乙醇 + 二氧化碳 + ATP」也可得分（兩個版本都被公開評卷接受）
+
+(ii)
+隨着生物燃料濃度增加，酵母的生長速率下降。
+The growth rate of yeast cells decreases with the increase in concentration of biofuel. ✅
+同時，已死酵母細胞的百分率上升。
+The percentage of dead yeast cells increases with the increase in concentration of biofuel. ✅
+(2) 已死細胞比例計算題
+已死細胞數目 = 11
+總細胞數 = 11 + 10 = 21
+已死細胞百分比 = 11 / 21 × 100% = 52.4% ✅
+(3) 酵母細胞總數計算
+大方格尺寸 = 1 mm × 1 mm × 0.1 mm = 1 × 10⁻⁴ cm³
+稀釋倍數 = 10⁴
+
+每個大方格體積 = 1 mm × 1 mm × 0.1 mm = 1×10⁻⁴ cm³
+方格內平均細胞數 = 21 個
+稀釋倍數 = 10⁴
+每 cm³ 內酵母數量 = 21 ÷ 1×10⁻⁴ × 1000 × 10⁴ = 2.1×10⁹ 個酵母細胞
+ 
+(iii) 傳統 vs 基因改造（GM）酵母菌兩項優點（任寫兩項得分）
+以下任兩項均可，每點 1 分：
+
+✅ 方向 A：原料使用更靈活（non‑food biomass）
+
+可利用農作物的不可食部分、非農作物草類或木質部製造生物燃料，避免與糧食競爭。
+It can use non‑edible parts of crops, non‑crop grasses, or wood to produce biofuel, thus not competing with food supply.
+✅ 方向 B：提升產量或減少糧食競爭
+
+不會減少糧食作物的生產量 / 不會與人類糧食需求衝突。
+It will not reduce food production / will not compete with human food supply.
+因使用了不可食部分或其他資源，生物燃料的總產量可提高。
+As non‑edible parts can also be used, the total yield of biofuel can be increased.
+💡 所以 (b)(iii) 的兩個可行角度分別為：
+1️⃣ 使用不可食部分（或非農作物）→ 減少糧食競爭。
+2️⃣ 同時利用可食與不可食部分 → 提高生物燃料總產量。",
+22p204a,"📍參考答案
+(i)
+GTG
+
+這段突變使得 DNA 序列中第 6 個胺基酸的密碼子由 GAG （即 谷氨酸 Glutamic acid）變為 GTG（即 纈胺酸 Valine）。
+The mutation substitutes the codon GAG (for glutamic acid) with GTG (for valine) at the 6th amino acid position.
+
+(ii)
+421 個鹼基對 (bp)
+
+(iii)(1)
+該 DNA 樣本來自患有鐮狀細胞性貧血的 帶基因者（heterozygote）。
+The DNA sample comes from a carrier of sickle-cell anaemia (heterozygote).
+他同時擁有一條 正常的等位基因 和一條 突變的等位基因。
+It contains both a normal allele and a mutated allele.
+正常等位基因的 PCR 產物會被限制酶 X 切割成 兩段較短的 DNA 片段；突變等位基因因識別位點被破壞，不會被酶切，保留為 一條較長的 DNA 片段。
+The PCR product from the normal allele is digested by restriction enzyme X into two shorter DNA fragments,
+whereas the mutated allele is not cut, forming one longer DNA fragment.
+因此在電泳中總共可見 三條 DNA 帶（兩短一長）。
+Hence, after electrophoresis, three DNA bands are observed in total.
+
+(iii)(2)
+推理方式 1：
+帶 A 代表突變等位基因。
+Band A represents the mutated allele.
+
+由於突變破壞了限制酶 X 的識別位點，因此這段 DNA 未被酶切。
+As the mutation destroys the recognition site of restriction enzyme X, the DNA fragment from the mutated allele is not digested.
+
+未被切割的 DNA 片段最長。
+The undigested DNA fragment is the longest.
+
+在凝膠電泳中，最長的 DNA 片段移動最慢，離正極最遠。
+In gel electrophoresis, the longest DNA fragment moves the slowest and stays farthest from the positive pole.
+
+因此，帶 A 在凝膠上出現在最上方位置，對應突變等位基因。
+Therefore, band A appears at the upper position on the gel and corresponds to the mutated allele.
+
+推理方式 2：
+帶 A 代表突變等位基因。
+Band A represents the mutated allele.
+
+突變使得限制酶 X 的辨識位點被破壞，導致 DNA 片段未經酶切。
+The mutation destroys the recognition site of restriction enzyme X, so the DNA fragment remains undigested.
+
+帶 A 的位置與「未經酶切的 PCR 產物」中帶的位置相同。
+Band A is located at the same position as the band from the undigested PCR product.
+
+這證明帶 A 對應未被切割的片段，即突變等位基因。
+This shows that band A corresponds to the uncut fragment, i.e. the mutated allele.
+
+
+(iv)
+非洲人（African）
+
+根據表格，非洲族群中存在該突變等位基因，而東亞族群沒有此突變，故該 DNA 樣本最可能來自 非洲人。
+According to the table, the mutated allele is present in the African population but absent in the East Asian group; therefore, the DNA sample is most likely from an African individual.",
+22p204b,"📍參考答案
+
+(i)
+此轉化方法常見的兩項不足之處是：
+Two common limitations of this transformation method are:
+
+1️⃣ 只是一種隨機插入的過程，因此外來基因可能影響宿主基因的表達。
+Insertion is a random process, which may affect the expression of genes in the host cell.
+
+2️⃣ 並非所有植物細胞都能被土壤桿菌感染，因此轉化效率 / 成功率低。
+Not all plant cells can be infected by Agrobacterium, hence the efficiency / success rate of transformation is low.
+
+✅ 其他可行答案 (also acceptable):
+
+目標基因可能在感染的植物細胞中未被表達。
+The target gene may not be expressed in the infected plant cells.
+有時可能在宿主細胞基因組中出現多個外來基因的插入位點。
+Multiple insertions of the target gene in the host genome may occur.
+Agrobacterium 可能只感染某些特定宿主。
+Agrobacterium may have a limited host range.
+(ii)(1)
+Bt 玉米的種植率與殺蟲劑的用量之間呈 負相關。
+There is a negative correlation between the planting rate of Bt corn and the amount of pesticide used.
+
+當 Bt 玉米的種植比例上升時，殺蟲劑的用量下降。
+As the adoption rate of Bt corn increases, the use of pesticides decreases.
+
+由於 Bt 基因能產生對昆蟲有毒的蛋白質，使玉米對害蟲具抗性。
+This is because the Bt gene produces a protein toxic to insects, which confers pest resistance to corn.
+
+因此，農民不再需要（或需要較少）施用殺蟲劑。
+Therefore, there is less or no need to apply chemical pesticides.
+
+(ii)(2)
+種植 Bt 玉米對農民的一項好處是：
+One advantage of planting Bt corn to farmers is:
+
+1️⃣ 可減少殺蟲劑的使用量，從而降低生產成本、時間及勞動力。
+It reduces the use of pesticides, which in turn lowers production cost, time, and labour.
+
+✅ 其他可行答案 (other acceptable alternatives)：
+
+提高作物產量，因害蟲破壞減少。
+It increases crop yield by reducing the loss caused by pests.
+農田中殘留殺蟲劑減少，降低農民暴露於有害化學物的風險。
+Less pesticide residue remains in the farmland, decreasing the health risk for farmers.
+(iii)(1)
+從結果可見，僅有餵食被 Bt 玉米花粉覆蓋的葉片的毛蟲，其存活率下降。
+The results show that only caterpillars fed with leaves covered by Bt corn pollen had a lower survival rate.
+
+可能的解釋是毛蟲攝食含 Bt 花粉的葉時，攝入了具毒性的蛋白質。
+A possible explanation is that the caterpillars ingested the toxic protein present in Bt pollen while feeding on such leaves.
+
+該毒性蛋白殺死了毛蟲，導致其族群下降。
+The toxic protein killed the caterpillars, causing the population of species M to decrease.
+
+(iii)(2)
+在農田的實際情況下，影響實驗結果有效性的因素可能有多種。
+Under actual farmland conditions, several factors could affect the validity of the laboratory results.
+
+以下兩項是合理的例子：
+Any two of the following are acceptable:
+
+1️⃣ 田野距離 Bt 玉米花粉的傳播距離較遠，使毛蟲接觸花粉的機會較少。
+The distance of pollen spread in the farmland may mean that few caterpillars actually encounter Bt pollen.
+
+2️⃣ 花粉可能被雨水沖走或被風吹散，降低了接觸機率。
+Pollen grains may be washed away by rain or dispersed by wind.
+
+✅ 其他可行答案 (other acceptable alternatives)：
+
+在野外還有其他食物來源，毛蟲不一定吃到有花粉的葉片。
+Caterpillars in the field may feed on other plant species instead of pollen-covered leaves.
+田間競爭者可能先吃掉帶有花粉的葉片。
+Competitors in the habitat might consume pollen-covered leaves first.",
