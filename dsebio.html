@@ -293,16 +293,37 @@
 
         async function tryLoadDefaultCsv(){
             try{
-                const resp = await fetch('answers.csv', { cache: 'no-store' });
-                if(!resp.ok){
-                    showStatus('未找到 answers.csv，請上載 CSV 檔。', true);
-                    return;
+                // 嘗試載入多個 CSV 檔案
+                const csvFiles = ['answers.csv', 'answers1.csv', 'answers2.csv', 'answers3.csv', 'answers4.csv'];
+                let loadedCount = 0;
+                let totalLoaded = 0;
+                
+                for(const filename of csvFiles){
+                    try{
+                        const resp = await fetch(filename, { cache: 'no-store' });
+                        if(resp.ok){
+                            const text = await resp.text();
+                            const beforeSize = codeToAnswer.size;
+                            parseCsv(text);
+                            const newCount = codeToAnswer.size - beforeSize;
+                            if(newCount > 0){
+                                loadedCount++;
+                                totalLoaded += newCount;
+                                console.log(`已載入 ${filename}（${newCount} 條）`);
+                            }
+                        }
+                    }catch(e){
+                        // 忽略個別檔案錯誤，繼續載入其他檔案
+                    }
                 }
-                const text = await resp.text();
-                parseCsv(text);
-                showStatus(`已載入 answers.csv（共 ${codeToAnswer.size} 條）。`);
+                
+                if(loadedCount > 0){
+                    showStatus(`已載入 ${loadedCount} 個 CSV 檔案（共 ${totalLoaded} 條）。`);
+                } else {
+                    showStatus('未找到任何 CSV 檔案，請上載 CSV 檔。', true);
+                }
             }catch(err){
-                showStatus('讀取 answers.csv 時出錯，請手動上載。', true);
+                showStatus('讀取 CSV 時出錯，請手動上載。', true);
             }
         }
 
