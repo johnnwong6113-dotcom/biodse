@@ -135,8 +135,8 @@
 
         function normalizeKey(text){
             const cleaned = normalizeCell(stripWrappingQuotes(String(text || '')));
-            // 忽略所有空白並轉大楷，提升比對寬容度
-            return cleaned.replace(/\s+/g, '').toUpperCase();
+            // 忽略所有空白，但保持原始大小寫，提升比對寬容度
+            return cleaned.replace(/\s+/g, '');
         }
 
         function parseCsv(text){
@@ -345,6 +345,11 @@
                 resultEl.style.display = '';
                 return;
             }
+            
+            // 調試：顯示所有可用的編號
+            console.log('輸入的編號:', code);
+            console.log('可用的編號:', Array.from(codeToAnswer.keys()));
+            
             if(codeToAnswer.has(code)){
                 const data = codeToAnswer.get(code);
                 const answer = String(data?.answer ?? '');
@@ -399,6 +404,15 @@
                 tryLoadDefaultCsv();
             }
         }
+        
+        // 調試：顯示載入狀態
+        console.log('JavaScript 開始執行');
+        console.log('當前載入的記錄數:', codeToAnswer.size);
+        console.log('所有編號:', Array.from(codeToAnswer.keys()));
+        
+        // 測試查詢功能
+        console.log('測試查詢 2202:', codeToAnswer.has('2202'));
+        console.log('測試查詢 2101:', codeToAnswer.has('2101'));
     })();
     </script>
 </body>

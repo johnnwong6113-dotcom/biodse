@@ -1,54 +1,97 @@
 ﻿編號,答案,類近題目
-2202,"第 2 題 (DNA 鹼基配對)
-參考答案
-C. 只有 (2) 和 (3)
-C. Only (2) and (3)
+19p101,"(a)
+(i) 物理屏障：A、D（皮膚、血凝塊）
+(i) Physical barrier: A, D (skin, blood clot)
 
-詳細解釋 (Detailed Explanation)
-(1) DNA 是螺旋型
-與鹼基比例無直接關係。
-Helical shape of DNA does not explain base ratio.
+(ii) 化學屏障：B、E（眼淚、胃液）
+(ii) Chemical barrier: B, E (tears, gastric juice)
 
-(2) DNA 是雙鏈分子
-兩條鏈互補配對，A 與 T，C 與 G。
-DNA is double-stranded, with complementary base pairing of A–T and C–G.
+(b)
+P 代表抗體，可結合於病原體表面的抗原。
+P represents antibodies that bind to antigens on the surface of pathogens.
 
-(3) 含氮鹼基互補配對
-A 與 T 配對，C 與 G 配對 → A+C=50% 說明互補規律。
-A pairs with T, C with G → A + C = 50% fits complementary rule.
+這令多個病原體聚集成一大團，使它們被識別為一個大單位。
+This causes several pathogens to clump together into a large mass.
 
-✅ 正確是 (2)、(3)。
-Correct: (2) and (3).
+有助或促進吞噬細胞 Q 進行吞噬作用。
+This enhances or facilitates phagocytosis by phagocyte Q.
+",
+19p102,"📘 參考詳解
 
-📌 考試提醒 (Exam Tips)
+(a)
+P 代表受質。
+P represents the substrate.
 
-Chargaff's rule：A=T, C=G。
-Chargaff's rule: A=T, C=G.
-DNA 為「雙鏈 + 互補配對」。
-DNA is "double-stranded + complementary pairing".
-「螺旋形態」與比例無關。
-Helical structure unrelated to base ratios.","2201, 2203, 2204"
-2203,"第 3 題 (孟德爾分離定律)
-參考答案
-A. 等位基因；第一次減數細胞分裂
-A. Alleles; Meiosis I
+因為兩個 P 分子在酶 R 的協助下可結合生成一個 Q 分子。
+Because two P molecules are joined together with the help of enzyme R to form one Q molecule.
 
-詳細解釋 (Detailed Explanation)
-現代理解的遺傳因子
-孟德爾的「因子」= 等位基因。
-Mendel's "factors" = alleles.
+這個反應屬於合成代謝反應，所以 P 是受質。
+This reaction is an example of an anabolic (synthetic) reaction, so P is the substrate.
 
-等位基因的分離
-位於同源染色體上，在 減 I 同源分離時分開。
-Alleles are on homologous chromosomes, separated in Meiosis I.
+(b)
+R 代表酶。
+R represents the enzyme.
 
-為何不是減 II?
-減 II 分裂姐妹染色單體，非等位基因。
-Meiosis II separates sister chromatids, not alleles.
+它具有特定形狀的活性部位，可與 P 或 Q 結合。
+It has a specific shape or an active site for binding with P or Q.
 
-📌 考試提醒 (Exam Tips)
+在整個反應過程中，R 的形狀沒有改變，顯示它作為催化劑而不被消耗。
+During the whole reaction, the shape of R remains unchanged, indicating that it acts as a catalyst and is not consumed.
 
-分離定律= 等位基因在減 I 分離。
-Law of segregation = alleles segregate in Meiosis I.
-獨立分配定律= 減 I 不同染色體獨立分配。
-Law of independent assortment = chromosomes assort independently in Meiosis I.","2202, 2204, 2205"
+因此，R 是酶，能與受質形成酶–受質複合物。
+Therefore, R is the enzyme that forms an enzyme–substrate complex with the substrate.
+
+⚠️ 考試提醒（Exam Tips）
+答題關鍵詞要包括：
+「active site／活性部位」、
+「specific shape／特定形狀」、
+「enzyme–substrate complex／酶–受質複合物」、
+「unchanged after reaction／反應後形狀不變」。
+
+常見失分點：
+
+忘記提到酶在反應後不被改變。
+僅寫「P 是受質」或「R 是酶」而沒有解釋原因。
+建議句式（雙語模板）
+
+「P 是受質，因為它在反應中被酶幫助結合產生新化合物。」
+→ P is the substrate because it is joined together with the help of an enzyme to form a product.
+
+「R 是酶，因為它有特定的活性位與受質結合，並在反應後保持不變。」
+→ R is the enzyme because it has a specific active site for binding with the substrate and remains unchanged after the reaction.",
+19p103,"📘 參考詳解
+
+(a)
+減數分裂發生在花藥或子房內。
+Meiosis takes place inside the anther or ovary.
+
+(b)
+(i)
+事件 W 是「互換」。
+Event W is crossing over.
+
+(ii)
+在事件 W 期間，同源染色體的非姊妹染色單體之間會出現交叉，形成 X 形結構（稱為聯會點）。
+During event W, non-sister chromatids of homologous chromosomes cross over at X-shaped points (chiasmata).
+
+它們交換染色體或基因的片段。
+They exchange segments of chromosomes or genes.
+
+這是遺傳變異的重要來源，使後代產生新的遺傳組合，有助生物的演化。
+This is an important source of genetic variation, producing new gene combinations in offspring and aiding evolution.
+
+(c)
+(i)
+顯微照片 Y 屬於第一次減數分裂。
+Photomicrograph Y shows the first meiotic division.
+
+因為它顯示了同源染色體的配對或分離，這是第一次減數分裂的特徵。
+Because it shows the pairing or separation of homologous chromosomes, which is characteristic of the first meiotic division.
+
+(ii)
+第一次減數分裂會分開兩組同源染色體，使染色體數量減半。
+The first meiotic division separates the two sets of homologous chromosomes, halving the chromosome number.
+
+第二次減數分裂會分開姊妹染色單體，產生單倍體配子。
+The second meiotic division separates the sister chromatids, producing haploid gametes.",
+,,
