@@ -76,9 +76,12 @@
     <script id="embeddedJson" type="application/json" style="display:none"></script>
 
     <script>
-    (function(){
-        /** @type {Map<string,string>} */
-        const codeToAnswer = new Map();
+    try {
+        console.log('開始載入 JavaScript');
+        (function(){
+            console.log('JavaScript 函數開始執行');
+            /** @type {Map<string,string>} */
+            const codeToAnswer = new Map();
 
         const codeInput = document.getElementById('codeInput');
         const lookupBtn = document.getElementById('lookupBtn');
@@ -413,7 +416,10 @@
         // 測試查詢功能
         console.log('測試查詢 2202:', codeToAnswer.has('2202'));
         console.log('測試查詢 2101:', codeToAnswer.has('2101'));
-    })();
+        })();
+    } catch (error) {
+        console.error('JavaScript 執行錯誤:', error);
+    }
     </script>
 </body>
 </html>

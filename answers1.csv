@@ -1,51 +1,4 @@
 ﻿編號,答案,類近題目
-2101,"📌 參考答案
-D. 信使 RNA (mRNA)
-D. Messenger RNA (mRNA)
-
-📌 詳細解釋 (Detailed Explanation)
-
-1️⃣ 題目圖示流程
-DNA 經過 P 作用轉換為 X，然後 X 再經過 Q 作用合成 Y。
-DNA is converted into X through process P, and then X undergoes process Q to produce Y.
-
-2️⃣ 各選項分析
-P = 轉錄 (Transcription)：DNA → mRNA
-Q = 翻譯 (Translation)：mRNA → 蛋白質
-X = mRNA（信使 RNA）
-Y = 蛋白質
-
-3️⃣ 正確答案
-D. 信使 RNA (mRNA) 是轉錄的產物，攜帶遺傳訊息到核糖體進行翻譯。
-
-📌 考試提醒 (Exam Tips)
-轉錄 = DNA → mRNA（在細胞核）
-翻譯 = mRNA → 蛋白質（在細胞質核糖體）
-mRNA 是兩者之間的橋樑。","2102, 2103, 2104"
-2102,"📌 參考答案
-D. (1)、(2) 和 (3)
-D. (1), (2) and (3)
-
-📌 詳細解釋 (Detailed Explanation)
-
-1️⃣ 題目資訊
-Q 代表翻譯 (translation)，在核糖體上進行。
-Q represents translation, which occurs at the ribosome.
-
-2️⃣ 各選項分析
-(1) 核糖體由 RNA 和蛋白質組成 ✔
-Ribosomes are composed of RNA and proteins.
-
-(2) 核糖體是蛋白質合成的場所 ✔
-Ribosomes are the site of protein synthesis.
-
-(3) 核糖體存在於原核和真核細胞中 ✔
-Ribosomes exist in both prokaryotic and eukaryotic cells.
-
-📌 考試提醒 (Exam Tips)
-核糖體 = rRNA + 蛋白質
-核糖體功能 = 蛋白質合成
-核糖體分布 = 原核 + 真核細胞","2101, 2103, 2105"
 2103,"📌 參考答案
 C. P = 轉錄 (Transcription), Q 在細胞質發生 (Translation in cytoplasm)
 C. P = Transcription, Q occurs in the cytoplasm (Translation in cytoplasm)
@@ -70,3 +23,27 @@ C 選項正確描述了兩個過程及其發生位置。
 轉錄 = 核內，DNA → mRNA
 翻譯 = 胞質，mRNA → 蛋白質
 記住：轉錄在核，翻譯在質","2101, 2102, 2104"
+2203,"第 3 題 (孟德爾分離定律)
+參考答案
+A. 等位基因；第一次減數細胞分裂
+A. Alleles; Meiosis I
+
+詳細解釋 (Detailed Explanation)
+現代理解的遺傳因子
+孟德爾的「因子」= 等位基因。
+Mendel's "factors" = alleles.
+
+等位基因的分離
+位於同源染色體上，在 減 I 同源分離時分開。
+Alleles are on homologous chromosomes, separated in Meiosis I.
+
+為何不是減 II?
+減 II 分裂姐妹染色單體，非等位基因。
+Meiosis II separates sister chromatids, not alleles.
+
+📌 考試提醒 (Exam Tips)
+
+分離定律= 等位基因在減 I 分離。
+Law of segregation = alleles segregate in Meiosis I.
+獨立分配定律= 減 I 不同染色體獨立分配。
+Law of independent assortment = chromosomes assort independently in Meiosis I.","2202, 2204, 2205"
