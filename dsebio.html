@@ -25,6 +25,9 @@
     .section{ margin-top:18px; }
     code{ background:#f1f5f9; border:1px solid #cbd5e1; padding:1px 6px; border-radius:6px; color:#475569; }
     .footer{ margin-top:26px; text-align:center; color:#64748b; font-size:12px; }
+    .quick-btn{ background:#f1f5f9; border:1px solid #cbd5e1; color:#475569; padding:8px 12px; border-radius:8px; font-size:13px; cursor:pointer; transition:all .2s; }
+    .quick-btn:hover{ background:#e2e8f0; border-color:#94a3b8; color:#334155; }
+    .quick-btn:active{ transform:translateY(1px); background:#cbd5e1; }
     </style>
 </head>
 <body>
@@ -45,6 +48,64 @@
                 <div>輸入 <strong>6 位數</strong>查詢，例如：<code>2013年第05題 → 13p105</code>。</div>
                 <div style="margin-top:24px; font-weight:700;">卷二（P2）指引：</div>
                 <div>輸入 <strong>7 位數</strong>查詢，例如：<code>2022年第4A題 → 22p204a</code>。</div>
+            </div>
+        </div>
+
+        <div class="card section">
+            <div style="font-weight:700; margin-bottom:12px;">快速輸入</div>
+            <div style="margin-bottom:12px;">
+                <div style="font-weight:600; margin-bottom:8px; color:#475569;">常用前綴：</div>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+                    <button class="quick-btn" data-prefix="sp">SP</button>
+                    <button class="quick-btn" data-prefix="pp">PP</button>
+                    <button class="quick-btn" data-prefix="p1">P1</button>
+                    <button class="quick-btn" data-prefix="p2">P2</button>
+                    <button class="quick-btn" data-prefix="22">22</button>
+                    <button class="quick-btn" data-prefix="21">21</button>
+                    <button class="quick-btn" data-prefix="20">20</button>
+                    <button class="quick-btn" data-prefix="19">19</button>
+                    <button class="quick-btn" data-prefix="18">18</button>
+                    <button class="quick-btn" data-prefix="17">17</button>
+                    <button class="quick-btn" data-prefix="16">16</button>
+                    <button class="quick-btn" data-prefix="15">15</button>
+                    <button class="quick-btn" data-prefix="14">14</button>
+                    <button class="quick-btn" data-prefix="13">13</button>
+                    <button class="quick-btn" data-prefix="12">12</button>
+                </div>
+            </div>
+            <div style="margin-bottom:12px;">
+                <div style="font-weight:600; margin-bottom:8px; color:#475569;">常用數字：</div>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+                    <button class="quick-btn" data-prefix="1">1</button>
+                    <button class="quick-btn" data-prefix="2">2</button>
+                    <button class="quick-btn" data-prefix="3">3</button>
+                    <button class="quick-btn" data-prefix="4">4</button>
+                    <button class="quick-btn" data-prefix="5">5</button>
+                    <button class="quick-btn" data-prefix="6">6</button>
+                    <button class="quick-btn" data-prefix="7">7</button>
+                    <button class="quick-btn" data-prefix="8">8</button>
+                    <button class="quick-btn" data-prefix="9">9</button>
+                    <button class="quick-btn" data-prefix="0">0</button>
+                    <button class="quick-btn" data-prefix="1a">1A</button>
+                    <button class="quick-btn" data-prefix="1b">1B</button>
+                    <button class="quick-btn" data-prefix="2a">2A</button>
+                    <button class="quick-btn" data-prefix="2b">2B</button>
+                    <button class="quick-btn" data-prefix="3a">3A</button>
+                    <button class="quick-btn" data-prefix="3b">3B</button>
+                    <button class="quick-btn" data-prefix="4a">4A</button>
+                    <button class="quick-btn" data-prefix="4b">4B</button>
+                </div>
+            </div>
+            <div>
+                <div style="font-weight:600; margin-bottom:8px; color:#475569;">特殊符號：</div>
+                <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                    <button class="quick-btn" data-prefix="p">P</button>
+                    <button class="quick-btn" data-prefix="a">A</button>
+                    <button class="quick-btn" data-prefix="b">B</button>
+                    <button class="quick-btn" data-prefix="c">C</button>
+                    <button class="quick-btn" data-prefix="d">D</button>
+                    <button class="quick-btn" data-prefix="e">E</button>
+                </div>
             </div>
         </div>
 
@@ -333,8 +394,9 @@
                 
                 for(const filename of csvFiles){
                     try{
-                        // 強制使用相對路徑，避免從其他網站載入
-                        const url = new URL(filename, window.location.origin);
+                        // 以當前頁面所在資料夾為基準（支援 GitHub Pages 子路徑）
+                        const base = new URL('.', document.baseURI);
+                        const url = new URL(filename, base);
                         console.log(`嘗試載入: ${url.toString()}`);
                         
                         const resp = await fetch(url, { 
@@ -438,6 +500,19 @@
         lookupBtn.addEventListener('click', lookup);
         codeInput.addEventListener('keydown', function(e){
             if(e.key === 'Enter') lookup();
+        });
+
+        // 快速輸入按鈕功能
+        document.addEventListener('click', function(e){
+            if(e.target.classList.contains('quick-btn')){
+                const prefix = e.target.getAttribute('data-prefix');
+                if(prefix){
+                    // 將按鈕內容追加到輸入框
+                    codeInput.value += prefix;
+                    // 讓輸入框獲得焦點，方便繼續輸入
+                    codeInput.focus();
+                }
+            }
         });
 
         fileInput.addEventListener('change', function(){
